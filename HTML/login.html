@@ -5,17 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <title>Document</title>
+    <title>Alumni Finder Login</title>
 </head>
 <body>
-    <div id="main">
-
-        <h1 id="login-header">UMD Student Login</h1>
+    <div id="login-container">
+        <h1>Alumni Finder</h1>
+        <h2>UMD Student Login</h2>
         
-        <div>
-            
-        </div>
+        <form action="/auth" method="post">
+
+            <!-- This is to input the username-->
+            <div id="login-username">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <!-- This is to input the password-->
+            <div class="login-password">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+              
+            <!-- This is the submit button-->
+            <button type="submit">Login</button>
+
+        </form>
+
     </div>
+    <script src="login.js"></script>
     
 </body>
 </html>
