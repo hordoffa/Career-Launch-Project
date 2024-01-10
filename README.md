@@ -2,9 +2,9 @@
 Alumni Finder is....
 
 Memebers Names: 
-    Rabbera Hordoffa
-    Sequoia Santoro
-    Caitlin Yan
+    Rabbera Hordoffa,
+    Sequoia Santoro,
+    Caitlin Yan,
     Zoie Luka
 
 API Links: 
