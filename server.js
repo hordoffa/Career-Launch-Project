@@ -31,9 +31,9 @@ app.get('/', (req, res) => {
   
   // This route would handle the login form submission
 app.post('/auth', (req, res) => {
+  // Too complicated to try and implement and may take a while but the thought process is to..
   // Handle the authentication logic with UMD SSO
-  // This might involve making API requests to the UMD SSO service, validating credentials, etc.
-  // Once authenticated, rredirect the user to the home page or set up a session.
+  // Making API requests to the UMD SSO service then redirect the user to the home page or set up a session.
   res.redirect('/home');
 });
 
