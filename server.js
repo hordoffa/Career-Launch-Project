@@ -37,6 +37,11 @@ app.post('/auth', (req, res) => {
   res.redirect('/home');
 });
 
+app.get('/home', (req, res) => {
+  // Render the home HTML page
+  res.sendFile(__dirname + '/HTML/home.html');
+});
+
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
     console.log(`Stop to shutdown the server:`);
