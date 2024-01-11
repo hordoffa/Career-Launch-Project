@@ -42,6 +42,12 @@ app.get('/home', (req, res) => {
   res.sendFile(__dirname + '/HTML/home.html');
 });
 
+//this makes my image visible, and seems to address the problem of the
+//file not being visible, del when we find better solution
+app.get('/images/photo_red.png', (req, res) => {
+  res.sendFile(__dirname + '/HTML/images/photo_red.png');
+});
+
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
     console.log(`Stop to shutdown the server:`);
