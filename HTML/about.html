@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #E21833; 
+}
+header {
+    background-color: #E21833; /* Orange-Red */
+    padding: 20px;
+    text-align: center;
+}
+nav {
+	text-align: center;
+	padding: 10px 0;
+    margin: 20px;
+}
+nav a {
+    margin-right: 75px;
+    color: #FFFFFF; /* white */
+    text-decoration: none;
+}
+nav a:nth-of-type(2) {
+  color: #FFD200;
+}
+section {
+    background-color: #FFFFFF; /* white */
+    padding: 30px;
+}
+section:nth-of-type(1){
+	background-color: black;
+    padding: 1px;
+}
+section:nth-of-type(2){
+	color: black;
+    height: 465px;
+}
+
+
+</style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Style/style_about.css">
+    <link rel="stylesheet" href="">
     <title>Alumni Finder</title>
 </head>
+
 <body>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: white;
-            background-color: #8B0000; /* Dark Red */
-        }
-        header {
-            background-color: #FF4500; /* Orange-Red */
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            margin: 20px;
-        }
-        nav a {
-            margin-right: 15px;
-            color: white;
-            text-decoration: none;
-        }
-        section {
-            background-color: #FF4500; /* Orange-Red */
-            padding: 20px;
-        }
-    </style>
     
     <header>
         <h1>Welcome to Alumni Finder</h1>
         <p>A website dedicated to connecting students with alumni in their prospective industries.</p>
     </header>
-
+	<section id = "navbar">
     <nav>
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
@@ -45,11 +62,13 @@
         <a href="inbox.html">Inbox</a>
         <a href="profile.html">Profile</a>
     </nav>
-
+	</section>
     <section id="about">
         <h2>About</h2>
-        <p>Created as a part of the Break Through Tech Initiative, blah blah yadda yadda whatever Lorem 
-            ipsum dolor sit amet...</p> 
+        <p> Created as a part of the <b>Break Through Tech Initiative</b>, this site allows <b>students</b> to build relationships with <b>alumni</b> in their field of interest. This platform is a great way for alumni to stay connected in the community and for students to network and learn about <b>career opportunities</b> and strategies</p> 
+        <p> 
     </section>
+    
+    
 </body>
 </html>
