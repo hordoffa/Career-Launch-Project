@@ -10,34 +10,37 @@
 <body>
     <style>
         nav {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            background-color: red;
+            padding: 15px 0;
+            background-color: #8B0000;
+            justify-content: space-around;
+            display: flex;
             overflow: hidden;
         }
         nav a {
             float: left;
             color: #f2f2f2;
-            text-align: center;
-            padding: 15px 90px;
+            /* text-align: center; */
+            /* padding: 15px 90px; */
             text-decoration: none;
-            font-size: 30px;
+            font-size: 20px;
         }
         nav a:hover {
-            background-color: #a62b2b;
-            color: white;
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
         }
         body {
             background-image: url("images/photo_red.png");
             font-family: 'Inter';
             color: white;
+            margin: 0;
+            padding: 0;
         }
         header {
-            
-            position: relative;
+            /* position: relative;
             top: 80px;
-            left: 100px;
+            left: 100px; */
+            text-align: center;
+            padding-top: 80px;
             font-family: 'Inter';
             font-size: 40px;
             color: white;
@@ -52,14 +55,6 @@
         p {
             font-size: 30px;
         }
-
-        nav {
-            font-family: 'Inter';
-            font-size: 30px;
-            color: white;
-        }
-
-       
     </style>
 
 <nav>
@@ -75,8 +70,6 @@
         <h1>Alumni Finder</h1>
         <p>A website dedicated to connecting students with alumni in their prospective industries.</p>
     </header>
-   
-
   
 </body>
 </html>
