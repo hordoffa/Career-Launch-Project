@@ -15,15 +15,26 @@
             background-color: #8B0000; 
         }
         #login-container {
+            width: max-content;
             background-color: #FF4500; 
-            padding: 20px;
+            padding: 100px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1{
+            font-size: 50px;
+            text-align: center;
         }
         h2 {
             text-align: center;
         }
-        #login-username {
+        .login{
+            text-align: center;
             margin-bottom: 15px;
         }
         label {
@@ -32,23 +43,25 @@
         }
         input[type="text"],
         input[type="password"] {
-            width: 100%;
+            width: 500px;
             padding: 8px;
             border-radius: 4px;
             border: 1px solid #ccc;
         }
         button {
-            width: 100%;
+            width: 500px;
             padding: 10px;
             border: none;
             border-radius: 4px;
-            /* background-color: #007bff; */
-            color: rgb(255, 255, 11);
+            font-size: 20px;
+            background-color: rgb(255, 255, 11);
             cursor: pointer;
         }
+        #log-bttn{
+            text-align: center;
+        }
         button:hover {
-            size: 10px;
-            /* background-color: #0056b3; */
+           size: 300px;
         }
     </style>
     <div id="login-container">
@@ -58,19 +71,21 @@
         <form action="/auth" method="post">
 
             <!-- This is to input the username-->
-            <div id="login-username">
+            <div class="login">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
             </div>
 
             <!-- This is to input the password-->
-            <div class="login-password">
+            <div class="login">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
-              
+            <br>
             <!-- This is the submit button-->
-            <button type="submit">Login</button>
+            <div id="log-bttn">
+                <button type="submit"><strong>Log In</strong></button>
+            </div>
 
         </form>
 

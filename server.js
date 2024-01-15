@@ -34,12 +34,41 @@ app.post('/auth', (req, res) => {
   // Too complicated to try and implement and may take a while but the thought process is to..
   // Handle the authentication logic with UMD SSO
   // Making API requests to the UMD SSO service then redirect the user to the home page or set up a session.
+  let user = {
+    username: req.body.username
+  };
+  let data = JSON.stringify(user, null, 2);
+  fs.writeFile('userProfile.json', data, (err) => {
+    if (err) throw err;
+    console.log('Data written to file');
+  });
   res.redirect('/home');
 });
 
 app.get('/home', (req, res) => {
-  // Render the home HTML page
   res.sendFile(__dirname + '/HTML/home.html');
+});
+
+app.get('/about', (req, res) => {
+  res.sendFile(__dirname + '/HTML/about.html');
+});
+
+app.get('/alumni', (req, res) => {
+  res.sendFile(__dirname + '/HTML/alumni.html');
+});
+
+app.get('/inbox', (req, res) => {
+  res.sendFile(__dirname + '/HTML/inbox.html');
+});
+
+app.get('/profile', (req, res) => {
+  res.sendFile(__dirname + '/HTML/profile.html');
+});
+
+//this makes my image visible, and seems to address the problem of the
+//file not being visible, del when we find better solution
+app.get('/images/photo_red.png', (req, res) => {
+  res.sendFile(__dirname + '/HTML/images/photo_red.png');
 });
 
 app.listen(port, () => {
