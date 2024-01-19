@@ -55,8 +55,50 @@
         .search:hover{
         	opacity: 0.9;
         }
-        
-        .alum1{
+        .filters{
+        	margin: auto;
+            padding-left: 600px;
+        }
+        .CS{
+            margin-top: 30px;
+        	background-color: #FFD200; /* gold */
+            color: #726010;
+            padding: 5px;
+            text-align: center;
+            width: 166px;
+            border-radius: 20px;
+        }
+        .comp{
+        	margin: auto;
+            margin-top: 30px;
+        	background-color: #FFD200; /* gold */
+            color: #726010;
+            padding: 5px;
+            text-align: center;
+            width: 166px;
+            border-radius: 20px;
+        }
+        .loc{
+            margin-top: 30px;
+        	background-color: #FFD200; /* gold */
+            color: #726010;
+            padding: 5px;
+            text-align: center;
+            width: 166px;
+            border-radius: 20px;
+        }
+        .tri{
+        	width: 0;
+			height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 7px solid #555;
+            position: relative;
+            top: 11px;
+            left: 7px;
+          
+        }
+        .alum{
         	margin: auto;
             margin-bottom: 30px;
             border: 15px solid #CECECE;
@@ -69,8 +111,7 @@
             top: 100px;
             border-radius: 12px;
         }
-        
-        .alum1:hover {
+        .alum:hover {
             transform: scale(1.02);
             transition: transform 0.3s ease;
         }
@@ -101,9 +142,15 @@
     
     <h2 class = "alumniHeader">Alumni</h2>
     <div class="search">
-    	<h3>Find Alumni</h3>
+    	<h2>Find Alumni</h2>
     </div>
-    <div class="alum1">
+    
+    <div class = "filters">
+    	<button class = "CS">Computer Science<i class ="tri"></i></button>
+        <button class = "comp">Company<i class ="tri"></i></button>
+        <button class = "loc">Location<i class ="tri"></i></button>
+    </div>
+    <div class="alum">
     	<div id="dot"></div>
     	<div id = "alumText">
         	<h2>Alum 1</h2>
@@ -111,7 +158,7 @@
         	<p>Capital One Software Engineer</p>
         </div>
     </div>    
-    <div class="alum1">
+    <div class="alum">
     	<div id="dot"></div>
     	<div id = "alumText">
         	<h2>Alum 2</h2>
