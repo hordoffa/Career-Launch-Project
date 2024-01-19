@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni</title>
+
+    <style>
+       nav {
+            padding: 15px 0;
+            background-color: #8B0000;
+            justify-content: space-around;
+            display: flex;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            color: #f2f2f2;
+            /* text-align: center; */
+            /* padding: 15px 90px; */
+            text-decoration: none;
+            font-size: 20px;
+        }
+        nav a:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+        nav a:nth-of-type(3) {
+        color: #FFD200; /* gold */
+        }
+        body {
+            font-family: 'Interstate';
+            background-image: url("images/photo_red.png");
+            /*background-color: #E21833;*/
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        
+       	.alumniHeader{
+        	padding: 10px;
+        	padding-left: 30px;
+        }
+       	.search{
+        	margin: auto;
+        	background-color: #FFD200; /* gold */
+            color: #726010;
+            padding: 5px;
+            padding-left: 20px;
+            width: 500px;
+            border-radius: 20px;
+        }
+        
+        .search:hover{
+        	opacity: 0.9;
+        }
+        .filters{
+        	margin: auto;
+            padding-left: 600px;
+        }
+        .CS{
+            margin-top: 30px;
+        	background-color: #FFD200; /* gold */
+            color: #726010;
+            padding: 5px;
+            text-align: center;
+            width: 166px;
+            border-radius: 20px;
+        }
+        .comp{
+        	margin: auto;
+            margin-top: 30px;
+        	background-color: #FFD200; /* gold */
+            color: #726010;
+            padding: 5px;
+            text-align: center;
+            width: 166px;
+            border-radius: 20px;
+        }
+        .loc{
+            margin-top: 30px;
+        	background-color: #FFD200; /* gold */
+            color: #726010;
+            padding: 5px;
+            text-align: center;
+            width: 166px;
+            border-radius: 20px;
+        }
+        .tri{
+        	width: 0;
+			height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 7px solid #555;
+            position: relative;
+            top: 11px;
+            left: 7px;
+          
+        }
+        .alum{
+        	margin: auto;
+            margin-bottom: 30px;
+            border: 15px solid #CECECE;
+            background-color: white;
+            color: black;
+            padding: 10px;
+            padding-left: 12px;
+            width: 600px;
+            position: relative;
+            top: 100px;
+            border-radius: 12px;
+        }
+        .alum:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+        #dot, #alumText{
+        	display: inline-block;
+        }
+        #dot {
+  			height: 85px;
+  			width: 85px;
+  			background-color: #bbb;
+  			border-radius: 50%;
+            padding: 10px;
+		}
+        #alumText{
+        	padding-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/alumni">Alumni</a>
+        <a href="/inbox">Inbox</a>
+        <a href="/profile">Profile</a>
+    </nav>
+
+    
+    <h2 class = "alumniHeader">Alumni</h2>
+    <div class="search">
+    	<h2>Find Alumni</h2>
+    </div>
+    
+    <div class = "filters">
+    	<button class = "CS">Computer Science<i class ="tri"></i></button>
+        <button class = "comp">Company<i class ="tri"></i></button>
+        <button class = "loc">Location<i class ="tri"></i></button>
+    </div>
+    <div class="alum">
+    	<div id="dot"></div>
+    	<div id = "alumText">
+        	<h2>Alum 1</h2>
+        	<h3>Former CS major</h3>
+        	<p>Capital One Software Engineer</p>
+        </div>
+    </div>    
+    <div class="alum">
+    	<div id="dot"></div>
+    	<div id = "alumText">
+        	<h2>Alum 2</h2>
+        	<h3>Former CE major</h3>
+        	<p>Amazon Software Engineer</p>
+        </div>
+    </div>   
+    
+    
+</body>
+</html>
