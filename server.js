@@ -13,8 +13,10 @@ app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/public'))
 app.use(express.static(__dirname + '/assets'));
 
-app.set("views", path.resolve(__dirname, "templates"));
+app.set("views", path.resolve(__dirname, "HTML"));
 app.set("view engine", "ejs");
+
+const Users = require("./HTML/alum.js");
 
 // dotenv.config();
 const port = 3001;
@@ -40,7 +42,6 @@ app.post('/auth', (req, res) => {
   let data = JSON.stringify(user, null, 2);
   fs.writeFile('userProfile.json', data, (err) => {
     if (err) throw err;
-    console.log('Data written to file');
   });
   res.redirect('/home');
 });
@@ -54,7 +55,21 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/alumni', (req, res) => {
-  res.sendFile(__dirname + '/HTML/alumni.html');
+  // res.sendFile(__dirname + '/HTML/alumni.html');
+  res.render('alumni',  { alumni: [] }); 
+});
+
+app.get('/alumni/search', (req, res) => {
+  const query = req.query.query;
+  let filteredAlumni = Users;
+
+  if (query) {
+    filteredAlumni = Users.filter(alum =>
+      alum.company && alum.company.toLowerCase().includes(query.toLowerCase()) ||
+      alum.Industry && alum.Industry.toLowerCase().includes(query.toLowerCase())
+    );
+  }
+  res.json(filteredAlumni);
 });
 
 app.get('/inbox', (req, res) => {

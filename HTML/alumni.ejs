@@ -36,24 +36,46 @@
             color: white;
             margin: 0;
             padding: 0;
+            align-items: center;
         }
         
        	.alumniHeader{
         	padding: 10px;
         	padding-left: 30px;
         }
-       	.search{
+
+        .search{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+  
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+       	#searchInput{
         	margin: auto;
         	background-color: #FFD200; /* gold */
             color: #726010;
-            padding: 5px;
+            padding: 10px;
             padding-left: 20px;
             width: 500px;
             border-radius: 20px;
         }
+
+       #searchbttn{
+        background-color: #2a0a0a; 
+        color: #FFD200;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+       }
         
-        .search:hover{
-        	opacity: 0.9;
+       #searchbttn:hover{
+        	background-color: #6d1c1c;
         }
         .filters{
         	margin: auto;
@@ -138,35 +160,40 @@
         <a href="/inbox">Inbox</a>
         <a href="/profile">Profile</a>
     </nav>
-
-    
-    <h2 class = "alumniHeader">Alumni</h2>
+    <h1 class="alumniHeader">CONNECT WITH UMD ALUMNI</h1>
     <div class="search">
-    	<h2>Find Alumni</h2>
+        <input type="text" id="searchInput" placeholder="Company/Industry...">
+        <button id="searchbttn" onclick="searchAlumni()">Search</button>
     </div>
-    
-    <div class = "filters">
-    	<button class = "CS">Computer Science<i class ="tri"></i></button>
-        <button class = "comp">Company<i class ="tri"></i></button>
-        <button class = "loc">Location<i class ="tri"></i></button>
+
+    <div class="alumni-container" id="alumContainer">
+        <!-- Alumni will be dynamically added here -->
     </div>
-    <div class="alum">
-    	<div id="dot"></div>
-    	<div id = "alumText">
-        	<h2>Alum 1</h2>
-        	<h3>Former CS major</h3>
-        	<p>Capital One Software Engineer</p>
-        </div>
-    </div>    
-    <div class="alum">
-    	<div id="dot"></div>
-    	<div id = "alumText">
-        	<h2>Alum 2</h2>
-        	<h3>Former CE major</h3>
-        	<p>Amazon Software Engineer</p>
-        </div>
-    </div>   
-    
-    
+
+    <script>
+        function searchAlumni() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            fetch(`/alumni/search?query=${query}`)
+                .then(response => response.json())
+                .then(data => updateAlumniUI(data))
+                .catch(error => console.error('Error fetching alumni data:', error));
+        }
+
+        function updateAlumniUI(filteredAlumni) {
+            const alumniContainer = document.getElementById('alumContainer');
+            alumniContainer.innerHTML = '';
+
+            filteredAlumni.forEach(alum => {
+                const alumElement = document.createElement('div');
+                alumElement.classList.add('alum');
+                alumElement.innerHTML = `
+                    <h2>${alum.first_name} ${alum.last_name}</h2>
+                    <h3>${alum.company}</h3>
+                    <p>${alum.Industry}</p>
+                `;
+                alumniContainer.appendChild(alumElement);
+            });
+        }
+    </script>
 </body>
 </html>
