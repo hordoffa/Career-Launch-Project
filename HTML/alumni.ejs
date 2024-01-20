@@ -50,6 +50,7 @@
             align-items: center;
   
             position: absolute;
+            margin-top: 30px;
             top: 20%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -58,6 +59,7 @@
        	#searchInput{
         	margin: auto;
         	background-color: #FFD200; /* gold */
+            font-family: 'Interstate';
             color: #726010;
             padding: 10px;
             padding-left: 20px;
@@ -66,10 +68,12 @@
         }
 
        #searchbttn{
+        font-family: 'Interstate';
         background-color: #2a0a0a; 
         color: #FFD200;
         border: none;
         padding: 10px;
+        margin-left: 10px;
         border-radius: 10px;
         cursor: pointer;
        }
@@ -160,7 +164,7 @@
         <a href="/inbox">Inbox</a>
         <a href="/profile">Profile</a>
     </nav>
-    <h1 class="alumniHeader">CONNECT WITH UMD ALUMNI</h1>
+    <h1 class="alumniHeader">Connect With UMD Alumni</h1>
     <div class="search">
         <input type="text" id="searchInput" placeholder="Company/Industry...">
         <button id="searchbttn" onclick="searchAlumni()">Search</button>
