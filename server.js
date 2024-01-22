@@ -6,9 +6,27 @@ const fs = require("fs");
 const app = express();
 const bodyParser = require("body-parser");
 
+// // yarn add stream-chat
+// import { StreamChat } from 'stream-chat';
+// if you're using common js
+const StreamChat = require('stream-chat').StreamChat;
+
+// instantiate your stream client using the API key and secret
+// the secret is only used server side and gives you full access to the API
+// find your API keys here https://getstream.io/dashboard/
+const serverClient = StreamChat.getInstance('3dmdbk8f24eu', 'wnmnkkqarrpua7qvr5z5b9kkcfyfwtjcywe3j42jtcmgmp79tuhfpw8btebw5mbh');
+
+// generate a token for the user with id 'john' thats an example but i want to use the alum.js and alumni.ejs
+const token = serverClient.createToken('john');
+// next, hand this token to the client in your in your login or registration response
+
+// instantiate a new client (client side)
+const client = StreamChat.getInstance('3dmdbk8f24eu');
+
 require("dotenv").config({ path: path.resolve(__dirname, 'credentialsDontPost/.env') })  
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/images', express.static('images'));
 app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/public'))
 app.use(express.static(__dirname + '/assets'));
@@ -17,6 +35,8 @@ app.set("views", path.resolve(__dirname, "HTML"));
 app.set("view engine", "ejs");
 
 const Users = require("./HTML/alum.js");
+
+app.use(bodyParser.json());
 
 // dotenv.config();
 const port = 3001;
@@ -72,8 +92,24 @@ app.get('/alumni/search', (req, res) => {
   res.json(filteredAlumni);
 });
 
+
+/** This is where the streaming API is located */
+
+const sampleUser = {
+  id: 'john',
+  name: 'John Doe',
+};
+
 app.get('/inbox', (req, res) => {
   res.sendFile(__dirname + '/HTML/inbox.html');
+});
+
+app.post('/generateToken', (req, res) => {
+  try{
+
+  } catch (error){
+
+  }
 });
 
 app.get('/profile', (req, res) => {

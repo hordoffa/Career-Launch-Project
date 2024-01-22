@@ -15,7 +15,6 @@ function searchAlumni() {
             const filteredAlumni = alumniData.filter(alum =>
                 alum.company.toLowerCase().includes(query) || alum.Industry.toLowerCase().includes(query)
             );
-
             // Call a function to update the UI with the filtered alumni data
             updateAlumniUI(filteredAlumni);
         });
@@ -34,6 +33,7 @@ function updateAlumniUI(filteredAlumni) {
                 <h2>${alum.first_name} ${alum.last_name}</h2>
                 <h3>${alum.gender}</h3>
                 <p>${alum.company} - ${alum.Industry}</p>
+                <button onclick="connectToChat('${alum.id}')">Connect</button>
             </div>
         `;
         alumContainer.appendChild(alumElement);

@@ -7,18 +7,25 @@
     <title>Alumni</title>
 
     <style>
-       nav {
+        body {
+            font-family: 'Interstate';
+            background-image: url("images/photo_red.png");
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
             padding: 15px 0;
             background-color: #8B0000;
             justify-content: space-around;
             display: flex;
             overflow: hidden;
         }
+
         nav a {
             float: left;
             color: #f2f2f2;
-            /* text-align: center; */
-            /* padding: 15px 90px; */
             text-decoration: none;
             font-size: 20px;
         }
@@ -26,22 +33,16 @@
             transform: scale(1.1);
             transition: transform 0.3s ease;
         }
+
         nav a:nth-of-type(3) {
-        color: #FFD200; /* gold */
-        }
-        body {
-            font-family: 'Interstate';
-            background-image: url("images/photo_red.png");
-            /*background-color: #E21833;*/
-            color: white;
-            margin: 0;
-            padding: 0;
-            align-items: center;
+            color: #FFD200;
         }
         
        	.alumniHeader{
         	padding: 10px;
         	padding-left: 30px;
+            text-align: center;
+            font-size: larger;
         }
 
         .search{
@@ -50,14 +51,16 @@
             align-items: center;
   
             position: absolute;
-            top: 20%;
+            margin-top: 30px;
+            top: 18%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
 
        	#searchInput{
         	margin: auto;
-        	background-color: #FFD200; /* gold */
+        	background-color: #ffe159; /* gold */
+            font-family: 'Interstate';
             color: #726010;
             padding: 10px;
             padding-left: 20px;
@@ -66,10 +69,12 @@
         }
 
        #searchbttn{
+        font-family: 'Interstate';
         background-color: #2a0a0a; 
         color: #FFD200;
         border: none;
         padding: 10px;
+        margin-left: 10px;
         border-radius: 10px;
         cursor: pointer;
        }
@@ -114,16 +119,16 @@
 			height: 0;
 			border-left: 5px solid transparent;
 			border-right: 5px solid transparent;
-			border-top: 7px solid #555;
+			border-top: 7px solid #ce2d2d;
             position: relative;
             top: 11px;
             left: 7px;
           
         }
         .alum{
-        	margin: auto;
+            margin: auto;
             margin-bottom: 30px;
-            border: 15px solid #CECECE;
+            border: 15px solid #ce2d2d;
             background-color: white;
             color: black;
             padding: 10px;
@@ -131,7 +136,10 @@
             width: 600px;
             position: relative;
             top: 100px;
-            border-radius: 12px;
+            border-radius: 25px; /* Increased border radius */
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            /* display: flex; */
         }
         .alum:hover {
             transform: scale(1.02);
@@ -160,9 +168,9 @@
         <a href="/inbox">Inbox</a>
         <a href="/profile">Profile</a>
     </nav>
-    <h1 class="alumniHeader">CONNECT WITH UMD ALUMNI</h1>
+    <h1 style="font-size: 40px;" class="alumniHeader">CONNECT WITH UMD ALUMNI</h1>
     <div class="search">
-        <input type="text" id="searchInput" placeholder="Company/Industry...">
+        <input type="text" id="searchInput" style="color: black; font-size: large;" placeholder="Company/Industry...">
         <button id="searchbttn" onclick="searchAlumni()">Search</button>
     </div>
 
@@ -187,9 +195,12 @@
                 const alumElement = document.createElement('div');
                 alumElement.classList.add('alum');
                 alumElement.innerHTML = `
+                    <img id="profile" src="images/profile-image-icon.png">
                     <h2>${alum.first_name} ${alum.last_name}</h2>
                     <h3>${alum.company}</h3>
                     <p>${alum.Industry}</p>
+                    <button style="border-radius:5px; padding:5px; background-color:#ce2d2d; color:white; cursor: pointer;"
+                     onclick="connectToChat('${alum.id}')">Connect</button>
                 `;
                 alumniContainer.appendChild(alumElement);
             });

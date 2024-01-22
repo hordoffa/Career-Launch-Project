@@ -5,6 +5,7 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "http": "^0.0.1-security",
-    "node-ipinfo": "^3.5.1"
+    "node-ipinfo": "^3.5.1",
+    "stream-chat": "^8.14.5"
   }
 }

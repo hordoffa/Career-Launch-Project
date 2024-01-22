@@ -67,6 +67,8 @@ const Users = [
      "first_name": "Lamond",
      "last_name": "Ricket",
      "email": "lricket7@washington.edu",
+     "company": "Capital One",
+      "Industry": "Technology",
      "gender": "Male"
   , },
    {
@@ -74,6 +76,8 @@ const Users = [
      "first_name": "Florida",
      "last_name": "Licciardiello",
      "email": "flicciardiello8@sina.com.cn",
+     "company": "Indeed",
+     "Industry": "Technology",
      "gender": "Female",
    },
    {
@@ -81,6 +85,8 @@ const Users = [
      "first_name": "Gerianne",
      "last_name": "Jonas",
      "email": "gjonas9@typepad.com",
+     "company": "Edward Jones",
+     "Industry": "Finance",
      "gender": "Female",
    },
    {
@@ -88,6 +94,8 @@ const Users = [
      "first_name": "Amy",
      "last_name": "Tarbath",
      "email": "atarbatha@t.co",
+      "company": "Indeed",
+      "Industry": "Marketing",
      "gender": "Male"
   , },
    {
@@ -95,6 +103,8 @@ const Users = [
      "first_name": "Jerrilyn",
      "last_name": "Devil",
      "email": "jdevilb@upenn.edu",
+     "company": "Google",
+      "Industry": "Marketing",
      "gender": "Male"
   , },
    {
@@ -102,6 +112,8 @@ const Users = [
      "first_name": "Derrik",
      "last_name": "Halvorsen",
      "email": "dhalvorsenc@loc.gov",
+     "company": "Bank of America",
+      "Industry": "Finance",
      "gender": "Male"
   , },
    {
@@ -109,6 +121,8 @@ const Users = [
      "first_name": "Kellia",
      "last_name": "Driutti",
      "email": "kdriuttid@skyrock.com",
+     "company": "Google",
+     "Industry": "Design",
      "gender": "Male"
   , },
    {
@@ -116,6 +130,8 @@ const Users = [
      "first_name": "Denys",
      "last_name": "Abrams",
      "email": "dabramse@godaddy.com",
+     "company": "Amazon",
+      "Industry": "Design",
      "gender": "Male"
   , },
    {
@@ -123,6 +139,8 @@ const Users = [
      "first_name": "Sophie",
      "last_name": "Wadmore",
      "email": "swadmoref@taobao.com",
+     "company": "Edward Jones",
+      "Industry": "Finance",
      "gender": "Male"
   , },
    {
@@ -130,6 +148,8 @@ const Users = [
      "first_name": "Ivonne",
      "last_name": "Axby",
      "email": "iaxbyg@paginegialle.it",
+     "company": "Fannie Mae",
+      "Industry": "Research",
      "gender": "Male"
   , },
    {
@@ -137,6 +157,8 @@ const Users = [
      "first_name": "Andee",
      "last_name": "Babcock",
      "email": "ababcockh@hubpages.com",
+     "company": "Fannie Mae",
+      "Industry": "Research",
      "gender": "Female",
    },
    {
@@ -144,6 +166,8 @@ const Users = [
      "first_name": "Shawn",
      "last_name": "Baxstair",
      "email": "sbaxstairi@artisteer.com",
+     "company": "Edward Jones",
+      "Industry": "Research",
      "gender": "Female",
    },
    {
@@ -151,6 +175,8 @@ const Users = [
      "first_name": "Randolph",
      "last_name": "Chowne",
      "email": "rchownej@nymag.com",
+     "company": "Indeed",
+      "Industry": "Technology",
      "gender": "Male"
   , },
    {
@@ -158,6 +184,8 @@ const Users = [
      "first_name": "Hayward",
      "last_name": "Emmet",
      "email": "hemmetk@ustream.tv",
+     "company": "Fannie Mae",
+      "Industry": "Technology",
      "gender": "Female",
    },
    {
@@ -165,6 +193,8 @@ const Users = [
      "first_name": "Paule",
      "last_name": "Kleinhausen",
      "email": "pkleinhausenl@bigcartel.com",
+     "company": "Capital One",
+      "Industry": "Technology",
      "gender": "Male"
   , },
    {
@@ -172,6 +202,8 @@ const Users = [
      "first_name": "Berton",
      "last_name": "Wingeatt",
      "email": "bwingeattm@taobao.com",
+     "company": "Bank of America",
+      "Industry": "Finance",
      "gender": "Female",
    },
    {
@@ -179,6 +211,8 @@ const Users = [
      "first_name": "Ameline",
      "last_name": "Jeanon",
      "email": "ajeanonn@bandcamp.com",
+     "company": "Bank of America",
+      "Industry": "Marketing",
      "gender": "Female",
    },
    {
@@ -186,6 +220,8 @@ const Users = [
      "first_name": "Shepperd",
      "last_name": "Oertzen",
      "email": "soertzeno@arstechnica.com",
+     "company": "Bank of America",
+      "Industry": "Design",
      "gender": "Male"
   , },
    {
@@ -193,6 +229,8 @@ const Users = [
      "first_name": "Sean",
      "last_name": "Veltmann",
      "email": "sveltmannp@jigsy.com",
+     "company": "Google",
+      "Industry": "Technology",
      "gender": "Male"
   , },
    {
@@ -200,6 +238,8 @@ const Users = [
      "first_name": "Julie",
      "last_name": "Pigot",
      "email": "jpigotq@archive.org",
+     "company": "Edward Jones",
+     "Industry": "Technology",
      "gender": "Male"
   , },
    {
@@ -207,6 +247,8 @@ const Users = [
      "first_name": "Goldi",
      "last_name": "Tink",
      "email": "gtinkr@tripod.com",
+     "company": "Freddie Mac",
+     "Industry": "Technology",
      "gender": "Male"
   , },
    {
@@ -214,6 +256,8 @@ const Users = [
      "first_name": "Jeannie",
      "last_name": "Kennelly",
      "email": "jkennellys@hugedomains.com",
+     "company": "Freddie Mac",
+     "Industry": "Technology",
      "gender": "Male"
   , },
    {
@@ -221,6 +265,8 @@ const Users = [
      "first_name": "Josephine",
      "last_name": "Kennefick",
      "email": "jkennefickt@icq.com",
+     "company": "Freddie Mac",
+     "Industry": "Marketing",
      "gender": "Female",
    },
    {
@@ -228,6 +274,8 @@ const Users = [
      "first_name": "Elli",
      "last_name": "Pettigrew",
      "email": "epettigrewu@nsw.gov.au",
+     "company": "Amazon",
+     "Industry": "Technology",
      "gender": "Female",
    },
    {
@@ -235,6 +283,8 @@ const Users = [
      "first_name": "Nevins",
      "last_name": "McGlaughn",
      "email": "nmcglaughnv@webnode.com",
+     "company": "Capital One",
+     "Industry": "Design",
      "gender": "Male"
   , },
    {
@@ -242,6 +292,8 @@ const Users = [
      "first_name": "Roseann",
      "last_name": "Schwant",
      "email": "rschwantw@bandcamp.com",
+     "company": "Freddie Mac",
+     "Industry": "Technology",
      "gender": "Female",
    },
    {
@@ -249,6 +301,8 @@ const Users = [
      "first_name": "Hunt",
      "last_name": "McGaughay",
      "email": "hmcgaughayx@freewebs.com",
+     "company": "Edward Jones",
+     "Industry": "Finance",
      "gender": "Polygen,der"
    },
    {
@@ -256,6 +310,8 @@ const Users = [
      "first_name": "Inger",
      "last_name": "Sussans",
      "email": "isussansy@webnode.com",
+     "company": "Indeed",
+     "Industry": "Technology",
      "gender": "Male"
   , },
    {
@@ -263,6 +319,8 @@ const Users = [
      "first_name": "Hobie",
      "last_name": "Rodman",
      "email": "hrodmanz@oakley.com",
+     "company": "Intel",
+     "Industry": "Technology",
      "gender": "Female",
    },
    {
@@ -270,6 +328,8 @@ const Users = [
      "first_name": "Shandra",
      "last_name": "Creighton",
      "email": "screighton10@storify.com",
+     "company": "Intel",
+     "Industry": "Technology",
      "gender": "Female",
    },
    {
@@ -277,6 +337,8 @@ const Users = [
      "first_name": "Poppy",
      "last_name": "Benne",
      "email": "pbenne11@ameblo.jp",
+     "company": "Intel",
+     "Industry": "Marketing",
      "gender": "Female",
    },
    {
@@ -284,6 +346,8 @@ const Users = [
      "first_name": "Skelly",
      "last_name": "Critchard",
      "email": "scritchard12@slate.com",
+     "company": "Intel",
+     "Industry": "Design",
      "gender": "Female",
    },
    {
@@ -291,6 +355,8 @@ const Users = [
      "first_name": "Rhea",
      "last_name": "Purple",
      "email": "rpurple13@admin.ch",
+     "company": "Samsung",
+     "Industry": "Technology",
      "gender": "Female",
    },
    {
@@ -298,6 +364,8 @@ const Users = [
      "first_name": "Gilberto",
      "last_name": "Tift",
      "email": "gtift14@simplemachines.org",
+     "company": "Samsung",
+     "Industry": "Technology",
      "gender": "Female",
    },
    {
@@ -305,6 +373,8 @@ const Users = [
      "first_name": "Celinka",
      "last_name": "Nolleau",
      "email": "cnolleau15@etsy.com",
+     "company": "Intel",
+     "Industry": "Technology",
      "gender": "Male"
   , },
    {
@@ -312,6 +382,8 @@ const Users = [
      "first_name": "Sascha",
      "last_name": "McKevitt",
      "email": "smckevitt16@jigsy.com",
+     "company": "Samsung",
+     "Industry": "Marketing",
      "gender": "Male"
   , },
    {
@@ -319,6 +391,8 @@ const Users = [
      "first_name": "Blondelle",
      "last_name": "Mussalli",
      "email": "bmussalli17@wiley.com",
+     "company": "Intel",
+     "Industry": "Research",
      "gender": "Female",
    },
    {
@@ -326,6 +400,8 @@ const Users = [
      "first_name": "Gal",
      "last_name": "Corkell",
      "email": "gcorkell18@freewebs.com",
+     "company": "Samsung",
+     "Industry": "Research",
      "gender": "Male"
   , }
 ];
