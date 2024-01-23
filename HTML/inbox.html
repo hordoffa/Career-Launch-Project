@@ -159,11 +159,45 @@
         <a href="/inbox">Inbox</a>
         <a href="/profile">Profile</a>
     </nav>
+    <div id="chatPanel"></div>
+    <script>
+      let channel = null; // Global variable to store the chat channel
 
-    <h2 class = "alumniHeader"></h2>
-    <div class="search">
-    	<h3>Search</h3>
-    </div>
+      const client = StreamChat.getInstance('3dmdbk8f24eu');
+      const { userId, channelId } = connectedUserInfo || {};
+      if (userId && channelId) {
+          const tokenResponse = await fetch(`/token?userId=${userId}`);
+          const { token } = await tokenResponse.json();
+          client.connectUser({ id: userId }, token);
+          channel = client.channel('messaging', channelId);
+
+          channel.watch().then(() => {
+              channel.on('message.new', event => {
+                  const newMessage = event.message;
+
+                  const messageElement = document.createElement('div');
+                  messageElement.innerHTML = `
+                      <p><strong>${newMessage.user.name}:</strong> ${newMessage.text}</p>
+                  `;
+                  const chatPanel = document.getElementById('chatPanel');
+                  chatPanel.appendChild(messageElement);
+              });
+          });
+      }
+
+      function sendMessage() {
+          const chatInput = document.getElementById('chatInput');
+          const messageText = chatInput.value;
+
+          // Send the message to the chat channel
+          if (channel) {
+              channel.sendMessage({ text: messageText });
+          }
+
+          // Clear the input area
+          chatInput.value = '';
+        }
+    </script>
     
   <div class="container">
 
@@ -195,7 +229,7 @@
                         <h5>Alumni 4</h5>
                     </div> 
                     </div>
-      <!-- Add more chat items as needed -->
+      <!-- Add more chat items as needed  -->
     </div>
     <div class="chat-panel" id="chatPanel">
         <div style="width: 750px; height: 75px; position: relative">
@@ -217,25 +251,6 @@
         <div style="width: 22.96px; height: 38px; left: 41.92px; top: 21px; position: absolute; color: black; font-size: 35px; font-family: Inter; font-weight: 400; word-wrap: break-word">+</div>
       </div>
   </div>
-  
-  <script>
-    const client = StreamChat.getInstance('3dmdbk8f24eu');
-    
-    // Connect the client with the user's token (you'll need to generate this on the server)
-    client.connectUser({ id: 'user-id' }, 'user-token');
-  
-    // Get or create a new chat channel
-    const channel = client.channel('messaging', 'channel-id');
-  
-    // Render the chat messages
-    channel.watch().then(() => {
-      channel.state.messages.forEach(message => {
-        const messageElement = document.createElement('p');
-        messageElement.textContent = message.text;
-        document.body.appendChild(messageElement);
-      });
-    });
-  </script>
 
 </body>
 </html>
